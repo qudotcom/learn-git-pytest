@@ -43,8 +43,14 @@ def is_palindrome(s: str) -> bool:
         True if the string is a palindrome, False otherwise
     """
     L1=s.split()
-    L2=L[::-1]
-    return L1 == L2
+    if len(L1[0]) == 1 : 
+         L2=L[::-1]
+         return L1 == L2
+    else :
+         L11=[]
+         for i in range(len(L1)) : L11 += L1[i]
+         L22=L11[::-1]
+         return L11 = L22
 
 def capitalize_words(s: str) -> str:
     """
