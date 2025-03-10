@@ -11,9 +11,7 @@ def reverse_string(s: str) -> str:
     Returns:
         The reversed string
     """
-    # TODO: Implement this function
-    pass
-
+    return s[::-1]
 
 def count_vowels(s: str) -> int:
     """
@@ -26,9 +24,11 @@ def count_vowels(s: str) -> int:
     Returns:
         The number of vowels in the string
     """
-    # TODO: Implement this function
-    pass
-
+    Vowels = (a, e, i, o, u, A, E, I, O, U)
+    c=0
+    for l in s:
+        if l in Vowels : c+=1 
+    return c
 
 def is_palindrome(s: str) -> bool:
     """
@@ -42,9 +42,9 @@ def is_palindrome(s: str) -> bool:
     Returns:
         True if the string is a palindrome, False otherwise
     """
-    # TODO: Implement this function
-    pass
-
+    L1=s.split()
+    L2=L[::-1]
+    return L1 == L2
 
 def capitalize_words(s: str) -> str:
     """
@@ -56,5 +56,8 @@ def capitalize_words(s: str) -> str:
     Returns:
         The input string with the first letter of each word capitalized
     """
-    # TODO: Implement this function
-    pass
+    L = s.split()
+    for x in in range(len(L)) : L[x] = capitalize(L[x])
+    result = ""
+    for x in range(L) : result += L[x]
+    return result
